@@ -24,9 +24,10 @@ export default function Peta() {
   return (
     <MapContainer 
       center={centerPosition} 
-      zoom={16} 
+      zoom={16}
+      className="peta"
       // Beri tinggi eksplisit agar tidak 0
-      style={{ height: "80vh", width: "100%", zIndex: 0 }}
+      style={{ zIndex: 0 }}
     >
       {/* Ganti ImageOverlay dengan TileLayer OpenStreetMap */}
       <TileLayer
