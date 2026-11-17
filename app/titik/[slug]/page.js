@@ -19,7 +19,10 @@ export default async function Detail({ params }) {
 
   return (
     <div>
-      
+      {/* Header Merah */}
+      <div className="header-print">
+        <h1>Peta Jalur Wisata dan Titik Potensi Bencana Kampung Sapen</h1>
+      </div>
 
       <div className="detail-container">
         {/* Sisi Kiri */}
