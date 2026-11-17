@@ -1,8 +1,9 @@
 "use client";
-import { MapContainer, ImageOverlay, Marker, Tooltip } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Tooltip } from "react-leaflet";
 import L from "leaflet";
 import { useRouter } from "next/navigation";
-import { pinpoints, PETA } from "@/lib/data";
+import { pinpoints } from "@/lib/data";
+import "leaflet/dist/leaflet.css";
 
 const ikon = (warna) =>
   L.divIcon({
@@ -16,14 +17,27 @@ const BIRU = ikon("#1a8fe3");
 
 export default function Peta() {
   const router = useRouter();
-  const batas = [[0, 0], [PETA.tinggi, PETA.lebar]];
+
+  const centerPosition = [-7.78806, 110.39361]; 
+
   return (
-    <MapContainer crs={L.CRS.Simple} bounds={batas} maxBounds={batas} minZoom={-1} maxZoom={2}
-      zoomSnap={0.25} className="peta" attributionControl={false}>
-      <ImageOverlay url={PETA.src} bounds={batas} />
+    <MapContainer 
+      center={centerPosition} 
+      zoom={16} 
+      style={{ height: "100%", width: "100%", zIndex: 0 }}
+    >
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      />
+      
       {pinpoints.filter((p) => p.dipeta).map((p) => (
-        <Marker key={p.slug} position={p.koordinat} icon={p.jenis === "bencana" ? MERAH : BIRU}
-          eventHandlers={{ click: () => router.push(`/titik/${p.slug}`) }}>
+        <Marker 
+          key={p.slug} 
+          position={p.koordinat}
+          icon={p.jenis === "bencana" ? MERAH : BIRU}
+          eventHandlers={{ click: () => router.push(`/titik/${p.slug}`) }}
+        >
           <Tooltip direction="top" offset={[0, -40]}>{p.nama}</Tooltip>
         </Marker>
       ))}
