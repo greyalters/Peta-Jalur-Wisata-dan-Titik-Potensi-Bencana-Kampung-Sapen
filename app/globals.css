@@ -21,8 +21,12 @@ a { color: inherit; }
 /* =========================================
    2. CSS HALAMAN DETAIL (Sudah Diperbaiki)
    ========================================= */
-.detail-container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; display: grid; grid-template-columns: 400px 1fr; gap: 40px; align-items: start; }
-@media (max-width: 768px) { .detail-container { grid-template-columns: 1fr; padding: 24px 16px; } }
+.detail-wrapper { min-height: calc(100vh - 140px); display: flex; align-items: center; justify-content: center; }
+.detail-container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; display: grid; grid-template-columns: 400px 1fr; gap: 40px; align-items: center; }
+@media (max-width: 768px) {
+  .detail-wrapper { min-height: calc(100vh - 110px); }
+  .detail-container { grid-template-columns: 1fr; padding: 24px 16px; }
+}
 
 .sisi-kiri { display: flex; flex-direction: column; gap: 24px; }
 .kotak-foto { width: 100%; aspect-ratio: 4/3; background-color: var(--abu); display: flex; align-items: center; justify-content: center; color: #666; overflow: hidden; border-radius: 8px;}
