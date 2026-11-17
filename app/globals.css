@@ -76,3 +76,9 @@ a { color: inherit; }
   .tautan-bencana { font-size: 18px; }
   .cetak-isi { grid-template-columns: 1fr; }
 }
+
+/* Memperbaiki konflik CSS dengan peta Leaflet */
+.leaflet-container img {
+  max-width: none !important;
+  max-height: none !important;
+}
