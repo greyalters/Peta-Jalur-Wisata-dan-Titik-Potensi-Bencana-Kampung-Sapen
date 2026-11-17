@@ -21,15 +21,6 @@ export default function Beranda() {
           Titik Lokasi Wisata
         </div>
       </div>
-
-      {/* Link Cepat (Opsional, boleh dihapus kalau tidak mau) */}
-      <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '24px', flexWrap: 'wrap' }}>
-        {pinpoints.filter(p => p.dipeta).map(p => (
-           <Link key={p.slug} href={`/titik/${p.slug}`} style={{ padding: '6px 14px', borderRadius: '8px', color: 'white', textDecoration: 'none', fontWeight: 'bold', backgroundColor: p.jenis === 'bencana' ? '#e5221f' : '#1a8fe3' }}>
-             {p.nama}
-           </Link>
-        ))}
-      </div>
     </div>
   );
 }
