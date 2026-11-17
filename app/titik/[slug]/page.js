@@ -49,21 +49,6 @@ export default async function Detail({ params }) {
               </p>
             ))}
           </div>
-
-          {isPosko && (
-            <div className="list-lainnya">
-              <h3>Potensi Bencana Lainnya:</h3>
-              <ul>
-                {bencanaLainnya.map((b) => (
-                  <li key={b.slug}>
-                    <Link href={`/titik/${b.slug}`} style={{ color: 'inherit', textDecoration: 'underline' }}>
-                      {b.nama}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
         </div>
       </div>
     </div>
