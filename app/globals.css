@@ -10,7 +10,6 @@ a { color: inherit; }
 /* Header Bawaan */
 .header { background: var(--merah); padding: 14px 20px; text-align: center; }
 .header a { font-family: var(--font-display), sans-serif; font-weight: 400; font-size: 40px; color: #fff; text-decoration: none; line-height: 1.2; }
-.footer { background: var(--merah); height: 40px; margin-top: auto; }
 
 /* Peta Leaflet (PENTING AGAR PETA MUNCUL) */
 .peta { height: min(72vh, 680px); width: 100%; background: var(--abu); border-radius: 4px; z-index: 0; }
