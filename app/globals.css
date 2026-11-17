@@ -1,39 +1,60 @@
-/* Reset Dasar */
+/* =========================================
+   1. CSS DASAR & BERANDA (Dari temanmu)
+   ========================================= */
+:root { --merah: #c4574b; --krem: #e5dc8e; --abu: #d9d9d9; --tombol: #d63a3a; --biru: #1a8fe3; --pin-merah: #e5221f; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { background-color: #E5DC8E; color: #000; font-family: var(--font-sans), sans-serif; }
+body { background-color: var(--krem); color: #111; font-family: var(--font-sans), system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+a { color: inherit; }
 
-/* Header Merah */
-.header-print { background-color: #C4574B; padding: 16px; text-align: center; }
-.header-print h1 { color: white; font-family: var(--font-display); font-size: 40px; font-weight: 400; margin: 0; }
+/* Header Bawaan */
+.header { background: var(--merah); padding: 14px 20px; text-align: center; }
+.header a { font-family: var(--font-display), sans-serif; font-weight: 400; font-size: 40px; color: #fff; text-decoration: none; line-height: 1.2; }
+.footer { background: var(--merah); height: 40px; margin-top: auto; }
 
-/* Container Utama (Kiri & Kanan) */
-.detail-container { max-width: 1100px; margin: 0 auto; padding: 60px 24px; display: grid; grid-template-columns: 400px 1fr; gap: 32px; align-items: start; }
+/* Peta Leaflet (PENTING AGAR PETA MUNCUL) */
+.peta { height: min(72vh, 680px); width: 100%; background: var(--abu); border-radius: 4px; z-index: 0; }
+.peta-loading { display: grid; place-items: center; }
+/* Memperbaiki konflik Tailwind/gambar dengan Leaflet */
+.leaflet-container img { max-width: none !important; max-height: none !important; }
+
+/* =========================================
+   2. CSS HALAMAN DETAIL (Sudah Diperbaiki)
+   ========================================= */
+.detail-container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; display: grid; grid-template-columns: 400px 1fr; gap: 40px; align-items: start; }
 @media (max-width: 768px) { .detail-container { grid-template-columns: 1fr; padding: 24px 16px; } }
 
-/* Sisi Kiri (Foto & Tombol) */
 .sisi-kiri { display: flex; flex-direction: column; gap: 24px; }
-.kotak-foto { width: 100%; aspect-ratio: 400/330; background-color: #D9D9D9; display: flex; align-items: center; justify-content: center; color: #666; overflow: hidden; }
+.kotak-foto { width: 100%; aspect-ratio: 4/3; background-color: var(--abu); display: flex; align-items: center; justify-content: center; color: #666; overflow: hidden; border-radius: 8px;}
 .kotak-foto img { width: 100%; height: 100%; object-fit: cover; }
-.tombol-daftar { display: block; width: 100%; text-align: center; background-color: #D63A3A; color: white; padding: 16px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 28px; transition: background-color 0.2s; }
-.tombol-daftar:hover { background-color: #B02A2A; }
 
-/* Sisi Kanan (Teks) */
-.sisi-kanan { display: flex; flex-direction: column; }
-.judul-detail { font-weight: 800; font-size: 50px; line-height: 1.1; margin-bottom: 8px; }
-.lokasi-detail { font-size: 25px; margin-bottom: 32px; }
-.deskripsi-detail { font-size: 40px; line-height: 1.3; text-align: justify; margin-bottom: 32px; }
-.kontak-detail { font-size: 35px; font-weight: 600; margin-bottom: 8px; }
-.kontak-detail a { color: inherit; text-decoration: none; }
+.tombol-daftar { display: block; width: 100%; text-align: center; background-color: var(--tombol); color: white; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 22px; transition: 0.2s; }
+.tombol-daftar:hover { background-color: #b02a2a; }
+
+.sisi-kanan { display: flex; flex-direction: column; padding-top: 10px; }
+/* Ukuran Font Dibuat Proporsional */
+.judul-detail { font-weight: 800; font-size: 42px; line-height: 1.2; margin-bottom: 12px; color: #111; }
+.lokasi-detail { font-size: 18px; color: #444; margin-bottom: 24px; }
+.deskripsi-detail { font-size: 22px; line-height: 1.6; text-align: justify; margin-bottom: 32px; color: #222; }
+.kontak-detail { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+.kontak-detail a { color: var(--biru); text-decoration: none; }
 .kontak-detail a:hover { text-decoration: underline; }
 
-/* List Bencana Lainnya */
-.list-lainnya { margin-top: 40px; }
-.list-lainnya h3 { font-size: 30px; font-weight: bold; margin-bottom: 8px; }
-.list-lainnya ul { padding-left: 24px; font-size: 25px; }
+.list-lainnya { margin-top: 32px; padding: 20px; background: rgba(255,255,255,0.4); border-radius: 8px; }
+.list-lainnya h3 { font-size: 20px; font-weight: bold; margin-bottom: 12px; }
+.list-lainnya ul { padding-left: 20px; font-size: 18px; line-height: 1.5; }
 
-/* Halaman Daftar Bencana */
-.daftar-container { min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-top: 60px; }
-.judul-daftar { font-weight: 800; font-size: 50px; margin-bottom: 48px; }
-.list-tombol { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 700px; }
-.tombol-bencana { display: block; width: 100%; background-color: #D63A3A; color: white; text-align: center; padding: 16px; border-radius: 8px; text-decoration: none; font-size: 35px; font-weight: 600; transition: background-color 0.2s; }
-.tombol-bencana:hover { background-color: #B02A2A; }
+/* =========================================
+   3. CSS HALAMAN DAFTAR BENCANA
+   ========================================= */
+.daftar-container { min-height: 80vh; display: flex; flex-direction: column; align-items: center; padding: 60px 24px; }
+.judul-daftar { font-weight: 800; font-size: 42px; margin-bottom: 40px; text-align: center; }
+.list-tombol { display: flex; flex-direction: column; gap: 16px; width: 100%; max-width: 600px; }
+.tombol-bencana { display: block; width: 100%; background-color: var(--tombol); color: white; text-align: center; padding: 16px; border-radius: 8px; text-decoration: none; font-size: 24px; font-weight: 600; transition: 0.2s; }
+.tombol-bencana:hover { background-color: #b02a2a; }
+
+@media (max-width: 768px) {
+  .header a { font-size: 24px; }
+  .judul-detail, .judul-daftar { font-size: 32px; }
+  .deskripsi-detail { font-size: 18px; text-align: left; }
+}
