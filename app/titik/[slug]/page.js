@@ -18,7 +18,7 @@ export default async function Detail({ params }) {
   const isPosko = p.slug === "posko-ktb-sapen";
 
   return (
-    <div className="detail-wrapper">
+    <div>
       <div className="detail-container">
         {/* Sisi Kiri */}
         <div className="sisi-kiri">
@@ -41,7 +41,7 @@ export default async function Detail({ params }) {
           <h1 className="judul-detail">{p.nama}</h1>
           <p className="lokasi-detail">{p.lokasi}</p>
           <p className="deskripsi-detail">{p.deskripsi}</p>
-
+          
           <div>
             {p.kontak.map((k) => (
               <p key={k.telp} className="kontak-detail">
