@@ -5,20 +5,23 @@ export const metadata = { title: "Daftar Potensi Bencana | Peta Kampung Sapen" }
 
 export default function Daftar() {
   return (
-    <div className="min-h-screen bg-[#F8F0C8] flex flex-col items-center pt-20 px-4 font-['Momo_Trust_Sans']">
+    <div className="min-h-screen bg-[#F4EA9B] flex flex-col items-center pt-16 px-4 font-['Momo_Trust_Sans',sans-serif]">
       
-      <h1 className="text-[50px] font-extrabold text-black mb-16 text-center leading-tight">
+      {/* Judul (ExtraBold 50px) */}
+      <h1 className="text-[50px] font-extrabold text-black mb-12 text-center">
         Daftar Potensi Bencana
       </h1>
       
-      <div className="flex flex-col gap-6 w-full max-w-2xl">
+      {/* Container Kotak Merah */}
+      <div className="flex flex-col gap-5 w-full max-w-[700px]">
         {pinpoints
+          // Saring: Hanya tampilkan yang jenisnya "bencana" dan BUKAN posko
           .filter((p) => p.jenis === "bencana" && p.slug !== "posko-ktb-sapen")
           .map((p) => (
             <Link 
               key={p.slug} 
               href={`/titik/${p.slug}`} 
-              className="w-full bg-[#D9534F] hover:bg-red-700 text-white text-center py-4 rounded-md text-[35px] font-semibold transition-all duration-200 shadow-sm"
+              className="block w-full bg-[#D63A3A] hover:bg-red-700 text-white text-center py-4 rounded-md text-[35px] font-semibold transition-colors"
             >
               {p.nama}
             </Link>
