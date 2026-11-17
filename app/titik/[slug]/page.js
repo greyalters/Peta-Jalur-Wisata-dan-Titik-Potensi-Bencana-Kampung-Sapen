@@ -45,7 +45,14 @@ export default async function Detail({ params }) {
           <div>
             {p.kontak.map((k) => (
               <p key={k.telp} className="kontak-detail">
-                {k.nama} - <a href={`tel:${k.telp}`}>{k.telp}</a>
+                {k.nama} -{" "}
+                <a
+                  href={`https://wa.me/${k.telp.replace(/^0/, "62")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {k.telp}
+                </a>
               </p>
             ))}
           </div>
