@@ -22,7 +22,7 @@ a { color: inherit; }
    2. CSS HALAMAN DETAIL (Sudah Diperbaiki)
    ========================================= */
 .detail-container { max-width: 1100px; margin: 0 auto; padding: 120px 24px 40px; display: grid; grid-template-columns: 400px 1fr; gap: 40px; align-items: stretch; }
-.detail-container:has(.tombol-daftar) .kontak-detail:last-child { margin-bottom: 14px; }
+.detail-container:has(.tombol-daftar) .kontak-detail:last-child { font-size: 22px; font-weight: 600; margin-bottom: 14px; }
 @media (max-width: 768px) { .detail-container { grid-template-columns: 1fr; padding: 24px 16px; } }
 
 .sisi-kiri { display: flex; flex-direction: column; gap: 24px; }
@@ -37,7 +37,7 @@ a { color: inherit; }
 .judul-detail { font-weight: 800; font-size: 42px; line-height: 1.2; margin-bottom: 12px; color: #111; }
 .lokasi-detail { font-size: 18px; color: #444; margin-bottom: 24px; }
 .deskripsi-detail { flex: 1; font-size: 22px; line-height: 1.6; text-align: justify; margin-bottom: 32px; color: #222; }
-.kontak-detail:last-child { margin-bottom: 0px; }
+.kontak-detail:last-child { font-size: 22px; font-weight: 600; margin-bottom: 0px; }
 .kontak-detail a { color: var(--biru); text-decoration: none; }
 .kontak-detail a:hover { text-decoration: underline; }
 
