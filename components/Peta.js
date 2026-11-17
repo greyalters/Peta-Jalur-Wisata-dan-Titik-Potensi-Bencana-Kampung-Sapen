@@ -2,9 +2,10 @@
 import { MapContainer, TileLayer, Marker, Tooltip } from "react-leaflet";
 import L from "leaflet";
 import { useRouter } from "next/navigation";
-import { pinpoints } from "@/lib/data";
-import "leaflet/dist/leaflet.css";
+import { pinpoints } from "@/lib/data"; // Hapus PETA, tidak dipakai lagi
+import "leaflet/dist/leaflet.css"; // Pastikan ini ada
 
+// Ikon kustom Anda (tidak perlu diubah)
 const ikon = (warna) =>
   L.divIcon({
     className: "",
@@ -17,15 +18,17 @@ const BIRU = ikon("#1a8fe3");
 
 export default function Peta() {
   const router = useRouter();
-
-  const centerPosition = [-7.78806, 110.39361]; 
+  // Koordinat pusat Kampung Sapen
+  const centerPosition = [-7.7867, 110.3918]; 
 
   return (
     <MapContainer 
       center={centerPosition} 
       zoom={16} 
-      style={{ height: "100%", width: "100%", zIndex: 0 }}
+      // Beri tinggi eksplisit agar tidak 0
+      style={{ height: "80vh", width: "100%", zIndex: 0 }}
     >
+      {/* Ganti ImageOverlay dengan TileLayer OpenStreetMap */}
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -34,7 +37,7 @@ export default function Peta() {
       {pinpoints.filter((p) => p.dipeta).map((p) => (
         <Marker 
           key={p.slug} 
-          position={p.koordinat}
+          position={p.koordinat} // Koordinat sudah dalam format [lat, lng]
           icon={p.jenis === "bencana" ? MERAH : BIRU}
           eventHandlers={{ click: () => router.push(`/titik/${p.slug}`) }}
         >
