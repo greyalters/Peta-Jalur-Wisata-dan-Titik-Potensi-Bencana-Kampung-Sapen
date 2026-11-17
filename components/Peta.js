@@ -18,7 +18,7 @@ const BIRU = ikon("#1a8fe3");
 export default function Peta() {
   const router = useRouter();
 
-  const centerPosition = [-7.785, 110.385]; 
+  const centerPosition = [-7.78806, 110.39361]; 
 
   return (
     <MapContainer 
