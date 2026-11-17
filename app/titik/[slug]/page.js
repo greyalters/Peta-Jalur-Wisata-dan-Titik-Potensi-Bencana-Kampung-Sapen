@@ -15,76 +15,74 @@ export async function generateMetadata({ params }) {
 export default async function Detail({ params }) {
   const p = getPin((await params).slug);
   if (!p) notFound();
-  const posko = p.slug === "posko-ktb-sapen";
+  
+  // Cek apakah halaman ini adalah Posko KTB
+  const isPosko = p.slug === "posko-ktb-sapen";
 
   return (
-    <div className="min-h-screen bg-[#F8F0C8] font-[family-name:var(--font-momo-sans)]">
+    <div className="min-h-screen bg-[#F4EA9B] font-['Momo_Trust_Sans',sans-serif] pb-20">
       
-      {/* HEADER MERAH */}
-      <div className="bg-[#D9534F] py-4 text-center">
-        <h1 className="text-white text-[40px] font-[family-name:var(--font-momo-display)]">
-          Peta Jalur Wisata dan Titik Potensi Bencana Kampung Sapen
-        </h1>
-      </div>
-
-      <div className="max-w-6xl mx-auto p-8 flex flex-col md:flex-row gap-12 mt-10">
+      {/* Container Utama (Grid Kiri Kanan) */}
+      <div className="max-w-[1100px] mx-auto px-6 pt-12 flex flex-col md:flex-row gap-10">
         
-        {/* KOLOM KIRI (FOTO & TOMBOL) */}
-        <div className="w-full md:w-1/3 flex flex-col items-center">
+        {/* === KOLOM KIRI (FOTO & TOMBOL) === */}
+        <div className="w-full md:w-[400px] flex flex-col gap-6">
+          
           {/* Kotak Foto Abu-abu */}
-          <div className="bg-gray-300 w-full aspect-square flex items-center justify-center text-gray-500 text-center p-4">
+          <div className="w-full aspect-[400/330] bg-[#D9D9D9] flex items-center justify-center text-gray-500 p-4 text-center">
             {p.foto ? (
               <img src={p.foto} alt={p.nama} className="w-full h-full object-cover" />
             ) : (
-              <span className="text-[20px]">Foto akan ditambahkan menyusul</span>
+              <span className="text-[18px]">Foto akan ditambahkan menyusul</span>
             )}
           </div>
 
-          {/* Tombol Daftar Bencana (Hanya muncul di halaman Posko) */}
-          {posko && (
+          {/* Tombol Merah (Hanya Muncul di Posko KTB) */}
+          {isPosko && (
             <Link 
               href="/daftar-potensi-bencana" 
-              className="w-full text-center mt-6 bg-[#D9534F] hover:bg-red-700 text-white px-6 py-4 rounded-md text-[35px] font-semibold transition"
+              className="w-full text-center bg-[#D63A3A] hover:bg-red-700 text-white font-bold py-4 rounded-md text-[28px] transition-colors"
             >
               Daftar Potensi Bencana
             </Link>
           )}
         </div>
 
-        {/* KOLOM KANAN (TEKS & KONTAK) */}
-        <div className="w-full md:w-2/3 flex flex-col">
-          {/* Judul Pinpoint */}
-          <h2 className="text-[50px] font-extrabold text-black leading-tight">
-            {p.nama}
-          </h2>
+        {/* === KOLOM KANAN (TEKS) === */}
+        <div className="w-full md:flex-1 flex flex-col">
           
-          {/* Lokasi */}
-          <p className="text-[25px] font-normal text-black mt-2 mb-8">
+          {/* Judul (Momo Trust Sans ExtraBold 50px) */}
+          <h1 className="text-[50px] font-extrabold leading-[1.1] text-black m-0">
+            {p.nama}
+          </h1>
+          
+          {/* Lokasi (Momo Trust Sans Regular 25px) */}
+          <p className="text-[25px] text-black mt-2 mb-8">
             {p.lokasi}
           </p>
           
-          {/* Deskripsi */}
-          <p className="text-[40px] font-normal text-black leading-snug">
+          {/* Deskripsi (Momo Trust Sans Regular 40px) */}
+          <p className="text-[40px] leading-[1.3] text-justify text-black mb-8">
             {p.deskripsi}
           </p>
 
-          {/* Kontak */}
-          <div className="mt-8">
+          {/* Kontak (Momo Trust Sans SemiBold 35px) */}
+          <div className="flex flex-col gap-2">
             {p.kontak.map((k) => (
-              <p key={k.telp} className="text-[35px] font-semibold text-black mt-2">
+              <p key={k.telp} className="text-[35px] font-semibold text-black m-0">
                 {k.nama} - <a href={`tel:${k.telp}`} className="hover:underline">{k.telp}</a>
               </p>
             ))}
           </div>
 
-          {/* Tautan Bencana Lainnya (Khusus Web di Halaman Posko) */}
-          {posko && (
-            <div className="mt-12">
-              <h3 className="text-[30px] font-bold mb-4 text-black">Potensi Bencana Lainnya:</h3>
-              <ul className="list-disc pl-6 text-[25px] text-black">
+          {/* List Tautan Bencana Lainnya (Khusus Posko di versi Web) */}
+          {isPosko && (
+            <div className="mt-10">
+              <h3 className="text-[30px] font-bold mb-2 text-black">Potensi Bencana Lainnya:</h3>
+              <ul className="list-disc pl-8 text-[25px] text-black">
                 {bencanaLainnya.map((b) => (
-                  <li key={b.slug} className="mb-2">
-                    <Link href={`/titik/${b.slug}`} className="text-blue-700 hover:underline">
+                  <li key={b.slug} className="mb-1">
+                    <Link href={`/titik/${b.slug}`} className="hover:underline">
                       {b.nama}
                     </Link>
                   </li>
