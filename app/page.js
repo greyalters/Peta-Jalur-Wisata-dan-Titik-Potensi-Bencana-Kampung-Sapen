@@ -21,6 +21,11 @@ export default function Beranda() {
           Titik Lokasi Wisata
         </div>
       </div>
+
+      {/* Tombol Sejarah Umum */}
+      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        <Link href="/sejarah" className="sejarah-link">Sejarah Kampung Sapen →</Link>
+      </div>
     </div>
   );
 }
