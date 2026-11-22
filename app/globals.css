@@ -36,7 +36,8 @@ a { color: inherit; }
 .judul-detail { font-weight: 800; font-size: 42px; line-height: 1.2; margin-bottom: 12px; color: #111; }
 .lokasi-detail { font-size: 18px; color: #444; margin-bottom: 24px; }
 .deskripsi-detail { flex: 1; font-size: 22px; line-height: 1.6; text-align: justify; margin-bottom: 32px; color: #222; }
-.kontak-detail:last-child { font-size: 22px; font-weight: 600; margin-bottom: 0px; }
+.kontak-detail { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+.kontak-detail:last-child { margin-bottom: 0; }
 .kontak-detail a { color: var(--biru); text-decoration: none; }
 .kontak-detail a:hover { text-decoration: underline; }
 
