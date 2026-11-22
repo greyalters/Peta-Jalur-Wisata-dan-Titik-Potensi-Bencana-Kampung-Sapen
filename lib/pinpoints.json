@@ -4,11 +4,45 @@
     "nama": "Posko KTB Sapen",
     "jenis": "bencana",
     "dipeta": true,
-    "koordinat": [-7.786701693787109, 110.39182461798902],
+    "koordinat": [
+      -7.786701693787109,
+      110.39182461798902
+    ],
     "lokasi": "Sapen, RT.23, Demangan, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55221",
     "deskripsi": "Posko Kampung Tangguh Bencana Sapen menjadi pusat koordinasi warga dalam kesiapsiagaan dan penanganan keadaan darurat di lingkungan Kampung Sapen.",
     "foto": "/posko-ktb-sapen.png",
-    "kontak": [{ "nama": "Slamet Santoso", "telp": "081578630617" }]
+    "kontak": [
+      {
+        "nama": "Slamet Santoso",
+        "telp": "081578630617"
+      }
+    ],
+    "sejarah": {
+      "poin": [
+        {
+          "tahun": "2021",
+          "teks": "BPBD Kota Yogyakarta memasukkan Kampung Sapen ke dalam daftar 15 kampung yang direncanakan menjadi Kampung Tangguh Bencana (KTB) pada tahun itu."
+        },
+        {
+          "tahun": "2023",
+          "teks": "Kampung Sapen disebut sebagai Kampung Tangguh Bencana, sekaligus dikenal sebagai Kampung Baca dan Kampung Inggris, yang diusulkan Ketua Kampung sejak 2019."
+        },
+        {
+          "tahun": null,
+          "teks": "KTB adalah program Pemerintah Kota Yogyakarta untuk membentuk warga yang siap menghadapi bencana. Posko ini menjadi pusat koordinasi warga saat keadaan darurat."
+        }
+      ],
+      "sumber": [
+        {
+          "nama": "Republika, 13 April 2021",
+          "url": "https://rejogja.republika.co.id/berita/qrhqio399/kota-yogyakarta-tambah-15-kampung-tangguh-bencana"
+        },
+        {
+          "nama": "Jogjakartanews, 15 Januari 2023",
+          "url": "https://jogjakartanews.com/baca/2023/01/15/23977/siap-hadapi-ancaman-krisis-global-kampung-sapen-kian-mantapkan-diri-sebagai-kampung-berwawasan-dunia"
+        }
+      ]
+    }
   },
   {
     "slug": "hujan-lebat-disertai-angin",
@@ -19,7 +53,12 @@
     "lokasi": "Kampung Sapen",
     "deskripsi": "Antisipasi pohon tumbang dan atap rusak akibat hujan lebat disertai angin. Warga diimbau waspada, memangkas ranting rapuh, dan memeriksa atap rumah.",
     "foto": "/hujan-lebat.png",
-    "kontak": [{ "nama": "Slamet Santoso", "telp": "081578630617" }]
+    "kontak": [
+      {
+        "nama": "Slamet Santoso",
+        "telp": "081578630617"
+      }
+    ]
   },
   {
     "slug": "mitigasi-hewan-berbahaya",
@@ -30,7 +69,12 @@
     "lokasi": "Kampung Sapen",
     "deskripsi": "Mitigasi kemunculan ular dan sarang tawon di lingkungan warga. Jangan ditangani sendiri; hubungi petugas kampung agar penanganannya aman.",
     "foto": "/mitigasi-hewan.png",
-    "kontak": [{ "nama": "Akhmad Jauhari Siregar", "telp": "0818466951" }]
+    "kontak": [
+      {
+        "nama": "Akhmad Jauhari Siregar",
+        "telp": "0818466951"
+      }
+    ]
   },
   {
     "slug": "pelayanan-pemulasaran-jenazah",
@@ -41,7 +85,12 @@
     "lokasi": "Kampung Sapen",
     "deskripsi": "Layanan pendampingan keluarga dalam pengurusan jenazah, mulai dari perawatan hingga pemakaman, sesuai keyakinan keluarga. Hubungi kontak di bawah untuk bantuan.",
     "foto": "/pemulasaran-jenazah.png",
-    "kontak": [{ "nama": "Amin Sujadmiko", "telp": "085864480540" }]
+    "kontak": [
+      {
+        "nama": "Amin Sujadmiko",
+        "telp": "085864480540"
+      }
+    ]
   },
   {
     "slug": "warga-sakit",
@@ -53,8 +102,14 @@
     "deskripsi": "Layanan kepedulian dan koordinasi bagi warga yang sakit, termasuk pendampingan rujukan ke fasilitas kesehatan.",
     "foto": "/warga-sakit.png",
     "kontak": [
-      { "nama": "Riya Risbiyanti", "telp": "087953387715" },
-      { "nama": "Pratama Udayana", "telp": "089619347094" }
+      {
+        "nama": "Riya Risbiyanti",
+        "telp": "087953387715"
+      },
+      {
+        "nama": "Pratama Udayana",
+        "telp": "089619347094"
+      }
     ]
   },
   {
@@ -62,32 +117,125 @@
     "nama": "Wayang Uwuh",
     "jenis": "wisata",
     "dipeta": true,
-    "koordinat": [-7.787570032431298, 110.38998265430352],
+    "koordinat": [
+      -7.787570032431298,
+      110.38998265430352
+    ],
     "lokasi": "Jl. Bimasakti No.29, Demangan, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55221",
     "deskripsi": "Wayang Uwuh (“uwuh” berarti sampah) karya Pak Iskandar dibuat dari limbah kertas dan plastik, dengan warna-warni yang menggambarkan watak tiap tokoh.",
     "foto": "/wayang-uwuh.png",
-    "kontak": [{ "nama": "Iskandar Hardjodimuljo", "telp": "082329186179" }]
+    "kontak": [
+      {
+        "nama": "Iskandar Hardjodimuljo",
+        "telp": "082329186179"
+      }
+    ],
+    "sejarah": {
+      "poin": [
+        {
+          "tahun": "2013",
+          "teks": "Iskandar Harjodimulyo mulai membuat Wayang Uwuh. Saat diundang ke Jakarta Biennale 2013 dengan dana terbatas, ia memakai sampah dari bantaran Sungai Ciliwung setelah banjir besar."
+        },
+        {
+          "tahun": "2017",
+          "teks": "Wayang Uwuh dipamerkan secara tunggal di Bangkok Art and Culture Centre, Thailand, disertai lokakarya."
+        },
+        {
+          "tahun": null,
+          "teks": "Bahannya sampah kertas, kardus, dan plastik yang dibersihkan dan dijemur, lalu diwarnai cat akrilik. Tokohnya antara lain Pandawa Lima, Rama, Sinta, Anoman, Rahwana, serta Semar, Gareng, dan Bagong."
+        },
+        {
+          "tahun": null,
+          "teks": "Karya Wayang Uwuh sudah sampai ke Bangkok, Jepang, Korea, Prancis, Amerika, dan Australia. Pak Iskandar juga mengajar lokakarya untuk kampus, perusahaan, dan anak jalanan."
+        }
+      ],
+      "sumber": [
+        {
+          "nama": "detik.com, 12 Januari 2023",
+          "url": "https://www.detik.com/jateng/jogja/d-6511066/tak-disangka-wayang-uwuh-buatan-jogja-ini-jadi-koleksi-museum-di-belanda"
+        },
+        {
+          "nama": "TIMES Indonesia, 11 Maret 2023",
+          "url": "https://timesindonesia.co.id/peristiwa-daerah/448456/kisah-iskandar-harjodimulyo-kampanye-lingkungan-melalui-wayang-uwuh"
+        },
+        {
+          "nama": "Baca Jogja, 29 Januari 2023",
+          "url": "https://bacajogja.id/2023/01/29/wayang-uwuh-berbahan-sampah-dari-yogyakarta-menembus-dunia/"
+        }
+      ]
+    }
   },
   {
     "slug": "malam-batik",
     "nama": "Malam Batik",
     "jenis": "wisata",
     "dipeta": true,
-    "koordinat": [-7.7881931134678695, 110.39130268161423],
+    "koordinat": [
+      -7.7881931134678695,
+      110.39130268161423
+    ],
     "lokasi": "Jl. Bimasakti No.43.B, RT.22/RW.07, Demangan, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55221",
     "deskripsi": "Malam Batik menghadirkan busana dan aksesori batik dengan proses malam cap atau canting, pewarnaan celup dan colet, memadukan tradisi dengan desain modern.",
     "foto": "/malam-batik.png",
-    "kontak": [{ "nama": "Theresa Naumi", "telp": "08972299662" }]
+    "kontak": [
+      {
+        "nama": "Theresa Naumi",
+        "telp": "08972299662"
+      }
+    ],
+    "sejarah": {
+      "poin": [
+        {
+          "tahun": "2006",
+          "teks": "Malam Batik didirikan oleh Theresa Naumi di Yogyakarta, dengan tujuan menjaga para perajin batik tetap berkarya serta melestarikan motif dan proses tradisional."
+        },
+        {
+          "tahun": null,
+          "teks": "Proses batiknya mengikuti tradisi: pola digambar di kain, malam ditorehkan dengan canting atau cap, kain diwarnai dengan cara celup atau colet, lalu malam dilorod (dilepas)."
+        },
+        {
+          "tahun": null,
+          "teks": "Sisa kain diolah kembali menjadi sandal dan kalung. Malam Batik juga membuka lokakarya membatik."
+        }
+      ],
+      "sumber": [
+        {
+          "nama": "Fimela, 7 Oktober 2025",
+          "url": "https://www.fimela.com/fashion/read/6177466/malam-batik-menjaga-ruh-tradisi-melalui-sentuhan-cinta-dari-yogyakarta"
+        }
+      ]
+    }
   },
   {
     "slug": "karawitan-eko-manunggal",
     "nama": "Karawitan Eko Manunggal",
     "jenis": "wisata",
     "dipeta": true,
-    "koordinat": [-7.787786847114937, 110.39340808903445],
+    "koordinat": [
+      -7.787786847114937,
+      110.39340808903445
+    ],
     "lokasi": "Sapen, GK 1, Demangan, Kemantren, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55221",
     "deskripsi": "Karawitan Eko Manunggal adalah kelompok seni karawitan, yaitu musik gamelan Jawa, di Kampung Sapen. Hubungi kontak di bawah untuk informasi latihan, pertunjukan, dan kunjungan.",
     "foto": "/karawitan-manunggal-eko.png",
-    "kontak": [{ "nama": "Sigit Hartanto", "telp": "081578701890" }]
+    "kontak": [
+      {
+        "nama": "Sigit Hartanto",
+        "telp": "081578701890"
+      }
+    ],
+    "sejarah": {
+      "poin": [
+        {
+          "tahun": null,
+          "teks": "Karawitan adalah seni musik gamelan Jawa. Gamelan dimainkan bersama-sama, sehingga setiap pemain harus saling mendengarkan agar irama tetap selaras."
+        },
+        {
+          "tahun": null,
+          "teks": "Kelompok Karawitan Eko Manunggal menjaga tradisi ini tetap hidup di Kampung Sapen melalui latihan dan pertunjukan."
+        }
+      ],
+      "sumber": []
+    }
   }
 ]

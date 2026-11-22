@@ -58,6 +58,32 @@ export default async function Detail({ params }) {
           </div>
         </div>
       </div>
+
+      {p.sejarah && (
+        <section className="sejarah-titik">
+          <h2>Sejarah &amp; Cerita</h2>
+          <ol className="sejarah-lini">
+            {p.sejarah.poin.map((s, i) => (
+              <li key={i}>
+                {s.tahun && <span className="sejarah-tahun">{s.tahun}</span>}
+                <p>{s.teks}</p>
+              </li>
+            ))}
+          </ol>
+          {p.sejarah.sumber.length > 0 && (
+            <p className="sejarah-sumber">
+              Sumber:{" "}
+              {p.sejarah.sumber.map((s, i) => (
+                <span key={s.url}>
+                  {i > 0 && " · "}
+                  <a href={s.url} target="_blank" rel="noopener noreferrer">{s.nama}</a>
+                </span>
+              ))}
+            </p>
+          )}
+          <Link href="/sejarah" className="sejarah-link">Baca sejarah Kampung Sapen →</Link>
+        </section>
+      )}
     </div>
   );
 }
