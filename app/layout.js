@@ -2,6 +2,7 @@ import "leaflet/dist/leaflet.css";
 import "./globals.css";
 import { display, sans } from "@/lib/fonts";
 import Header from "@/components/Header";
+import BackButton from "@/components/BackButton";
 
 export const metadata = {
   title: "Peta Jalur Wisata dan Titik Potensi Bencana Kampung Sapen",
