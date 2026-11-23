@@ -5,7 +5,6 @@ import { pinpoints } from "@/lib/data";
 export default function Beranda() {
   return (
     <div className="beranda" style={{ maxWidth: '1100px', margin: '0 auto', padding: '24px 16px' }}>
-      <h2 style={{ textAlign: 'center', fontSize: '24px', marginBottom: '16px' }}>Peta Kampung Sapen</h2>
       
       {/* Komponen Peta */}
       <Peta />
