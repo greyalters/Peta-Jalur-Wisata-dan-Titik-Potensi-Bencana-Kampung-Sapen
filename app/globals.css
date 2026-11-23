@@ -4,7 +4,7 @@
 :root { --merah: #c4574b; --krem: #e5dc8e; --abu: #d9d9d9; --tombol: #d63a3a; --biru: #1a8fe3; --pin-merah: #e5221f; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background-color: var(--krem); color: #111; font-family: var(--font-sans), system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
-main { flex: 1; }
+main { flex: 1; position: relative; }
 a { color: inherit; }
 
 /* Header Bawaan */
@@ -88,3 +88,10 @@ a { color: inherit; }
   .sejarah-halaman { padding: 32px 16px; }
   .sejarah-lini li, .sejarah-paragraf { font-size: 17px; }
 }
+
+/* =========================================
+   5. TOMBOL KEMBALI
+   ========================================= */
+.back-btn { position: absolute; top: 16px; left: 24px; z-index: 5; display: inline-flex; align-items: center; gap: 6px; background: var(--merah); color: #fff; border: 0; border-radius: 8px; padding: 8px 16px; font: inherit; font-weight: 600; font-size: 16px; cursor: pointer; transition: 0.2s; }
+.back-btn:hover { background: #a8473c; }
+@media (max-width: 768px) { .back-btn { position: static; margin: 12px 16px 0; } }
