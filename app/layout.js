@@ -14,7 +14,10 @@ export default function RootLayout({ children }) {
     <html lang="id" className={`${display.variable} ${sans.variable}`}>
       <body>
         <Header />
-        <main>{children}</main>
+        <main>
+          <BackButton />
+          {children}
+        </main>
         <footer className="footer" />
       </body>
     </html>
