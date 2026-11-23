@@ -1,16 +1,15 @@
 import Peta from "@/components/PetaDinamis";
 import Link from "next/link";
-import { pinpoints } from "@/lib/data";
 
 export default function Beranda() {
   return (
-    <div className="beranda" style={{ maxWidth: '1100px', margin: '0 auto', padding: '24px 16px' }}>
-      
+    <div className="beranda" style={{ maxWidth: '1100px', margin: '0 auto', padding: '24px 16px 12px' }}>
+
       {/* Komponen Peta */}
       <Peta />
 
-      {/* Legenda */}
-      <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginTop: '14px', fontSize: '18px' }}>
+      {/* Legenda + Tombol Sejarah dalam satu baris */}
+      <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', marginTop: '14px', fontSize: '18px' }}>
         <div>
           <span style={{ display: 'inline-block', width: '14px', height: '14px', borderRadius: '50%', backgroundColor: '#e5221f', marginRight: '8px', border: '2px solid #fff' }}></span>
           Titik Potensi Bencana
@@ -19,11 +18,7 @@ export default function Beranda() {
           <span style={{ display: 'inline-block', width: '14px', height: '14px', borderRadius: '50%', backgroundColor: '#1a8fe3', marginRight: '8px', border: '2px solid #fff' }}></span>
           Titik Lokasi Wisata
         </div>
-      </div>
-
-      {/* Tombol Sejarah Umum */}
-      <div style={{ textAlign: 'center', marginTop: '20px' }}>
-        <Link href="/sejarah" className="sejarah-link">Sejarah Kampung Sapen →</Link>
+        <Link href="/sejarah" className="sejarah-link" style={{ marginTop: 0 }}>Sejarah Kampung Sapen →</Link>
       </div>
     </div>
   );
