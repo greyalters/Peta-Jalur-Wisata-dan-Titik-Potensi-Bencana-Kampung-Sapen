@@ -18,7 +18,9 @@ export default function RootLayout({ children }) {
           <BackButton />
           {children}
         </main>
-        <footer className="footer" />
+        <footer className="footer">
+          KKN-PPM UGM Periode 3 Tahun 2026 Unit YO092 Gondokusuman
+        </footer>
       </body>
     </html>
   );
