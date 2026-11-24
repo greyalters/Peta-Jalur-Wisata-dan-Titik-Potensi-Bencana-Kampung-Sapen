@@ -16,7 +16,7 @@ a { color: inherit; }
 @media (max-width: 768px) { .footer { font-size: 14px; } }
 
 /* Peta Leaflet (PENTING AGAR PETA MUNCUL) */
-.peta { height: min(72vh, 680px); width: 100%; background: var(--abu); border-radius: 4px; z-index: 0; }
+.peta { height: max(320px, min(72vh, calc(100vh - 200px), 680px)); width: 100%; background: var(--abu); border-radius: 4px; z-index: 0; }
 .peta-loading { display: grid; place-items: center; }
 /* Memperbaiki konflik Tailwind/gambar dengan Leaflet */
 .leaflet-container img { max-width: none !important; max-height: none !important; }
