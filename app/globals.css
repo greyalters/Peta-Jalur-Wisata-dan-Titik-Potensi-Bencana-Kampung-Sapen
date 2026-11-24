@@ -11,6 +11,10 @@ a { color: inherit; }
 .header { background: var(--merah); padding: 14px 20px; text-align: center; }
 .header a { font-family: var(--font-display), sans-serif; font-weight: 400; font-size: 40px; color: #fff; text-decoration: none; line-height: 1.2; }
 
+/* Footer */
+.footer { background: var(--merah); color: #fff; padding: 10px 20px; text-align: center; font-family: var(--font-display), sans-serif; font-size: 18px; line-height: 1.2; }
+@media (max-width: 768px) { .footer { font-size: 14px; } }
+
 /* Peta Leaflet (PENTING AGAR PETA MUNCUL) */
 .peta { height: min(72vh, 680px); width: 100%; background: var(--abu); border-radius: 4px; z-index: 0; }
 .peta-loading { display: grid; place-items: center; }
